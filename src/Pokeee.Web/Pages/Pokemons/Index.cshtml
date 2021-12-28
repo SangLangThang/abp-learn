@@ -1,0 +1,83 @@
+@page
+@using Microsoft.AspNetCore.Authorization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Pokeee.Permissions
+@using Pokeee.Web.Pages.Pokemons
+@using Pokeee.Web.Menus
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Pokeee.Localization
+@inject IHtmlLocalizer<PokeeeResource> L
+@inject IAuthorizationService Authorization
+@model IndexModel
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["Pokemons"].Value;
+    PageLayout.Content.MenuItemName = PokeeeMenus.Pokemons;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/Pokemons/index.js" />
+}
+
+
+<abp-card>
+    <abp-card-body>
+		<abp-row class="mb-3">
+             <abp-column size-md="_8">
+                 <abp-dropdown >
+                    <abp-dropdown-button button-type="Secondary" text="Filter Pokemons"/>
+                    <abp-dropdown-menu>
+                        <form class="px-4 py-3" data-cy="checkbox-form">
+                           <abp-input asp-for="Bug"></abp-input>
+                            <abp-input asp-for="MinSlot10"></abp-input>
+                        </form>
+                        <abp-dropdown-divider></abp-dropdown-divider>
+                    </abp-dropdown-menu>
+                </abp-dropdown>
+            </abp-column>
+            <abp-column size-md="_4">
+                <form id="SearchForm" autocomplete="off">
+                    <div class="input-group">
+                        <input class="form-control page-search-filter-text" id="FilterText" placeholder="@L["Search"]"/>
+                        <abp-button button-type="Primary" type="submit" icon="search"/>
+                    </div>
+                </form>
+            </abp-column>
+            <abp-column size-md="_12" class="mt-3">
+                <a href="javascript:;" id="AdvancedFilterSectionToggler" class="text-decoration-none">@L["SeeAdvancedFilters"]</a>
+            </abp-column>
+        </abp-row>
+
+        <abp-row id="AdvancedFilterSection" style="display: none;">
+            <abp-column size="_3">
+                <abp-input asp-for="AvatarFilter" label="@L["Avatar"].Value" />
+            </abp-column>
+            <abp-column size="_3">
+                <abp-input asp-for="NameFilter" label="@L["Name"].Value" />
+            </abp-column>
+            <abp-column size="_3">
+                <abp-input asp-for="SlotFilterMin" label="@L["MinSlot"].Value" />
+            </abp-column>
+            <abp-column size="_3">
+                <abp-input asp-for="SlotFilterMax" label="@L["MaxSlot"].Value" />
+            </abp-column>
+            <abp-column size="_3">
+                <abp-input asp-for="TypeFilter" label="@L["Type"].Value" />
+            </abp-column>
+        </abp-row>
+
+        <abp-table striped-rows="true" id="PokemonsTable">
+            <thead>
+				<tr>
+					<th>@L["Actions"]</th>
+					<th>@L["Avatar"]</th>
+					<th>@L["Name"]</th>
+					<th>@L["Slot"]</th>
+					<th>@L["Type"]</th>
+
+				</tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>

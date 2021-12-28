@@ -1,0 +1,45 @@
+﻿
+@page
+@model Pokeee.Web.Pages.Infomation.IndexModel
+
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using System.Globalization
+@using Pokeee.Localization
+@inject IHtmlLocalizer<PokeeeResource> L
+@section scripts
+{
+    <abp-script src="/Pages/Infomation/Infomation.js" />
+}
+
+
+<abp-row class="mb-3">
+    <abp-column size-md="_6">
+        <form >
+            <abp-input asp-for="@Model.MyModel.Name"/>
+            <abp-input asp-for="@Model.MyModel.Description"/>
+            <abp-input asp-for="@Model.MyModel.Password"/>
+            <abp-input asp-for="@Model.MyModel.IsActive"/>
+            <abp-select asp-for="@Model.MyModel.City" asp-items="@Model.CityList"/>
+            <abp-select asp-for="@Model.MyModel.AnotherCity"/>
+            <abp-select asp-for="@Model.MyModel.MultipleCities" asp-items="@Model.CityList"/>
+            <abp-select asp-for="@Model.MyModel.MyCarType"/>
+            <abp-select asp-for="@Model.MyModel.MyNullableCarType"/>
+            <abp-radio asp-for="@Model.MyModel.CityRadio" asp-items="@Model.CityList" inline="true"/>
+            <abp-radio asp-for="@Model.MyModel.CityRadio2"/>
+        </form>
+    </abp-column>
+    <abp-column size-md="_6">
+        <abp-dynamic-form abp-model="@Model.MyDetailedModel"  submit-button="true">
+            <div>
+                Some content....
+            </div>
+            <div class="input-area">
+                <abp-form-content />
+            </div>
+            <div>
+                Some more content....
+            </div>
+        </abp-dynamic-form>
+    </abp-column>
+</abp-row>

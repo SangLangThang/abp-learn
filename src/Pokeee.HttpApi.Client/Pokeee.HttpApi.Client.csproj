@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Pokeee</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pokeee.Application.Contracts\Pokeee.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi.Client" Version="5.0.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi.Client" Version="5.0.0" />
+    <PackageReference Include="Volo.Abp.SettingManagement.HttpApi.Client" Version="5.0.0" />
+    <ProjectReference Include="..\..\modules\Volo.Chat\src\Volo.Chat.HttpApi.Client\Volo.Chat.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\modules\Volo.FileManagement\src\Volo.FileManagement.HttpApi.Client\Volo.FileManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\modules\Volo.Forms\src\Volo.Forms.HttpApi.Client\Volo.Forms.HttpApi.Client.csproj" />
+    <PackageReference Include="Volo.Saas.Host.HttpApi.Client" Version="5.0.0" />
+    <PackageReference Include="Volo.Abp.AuditLogging.HttpApi.Client" Version="5.0.0" />
+    <PackageReference Include="Volo.Abp.Identity.Pro.HttpApi.Client" Version="5.0.0" />
+    <PackageReference Include="Volo.Abp.Account.Pro.Admin.HttpApi.Client" Version="5.0.0" />
+    <PackageReference Include="Volo.Abp.Account.Pro.Public.HttpApi.Client" Version="5.0.0" />
+    <PackageReference Include="Volo.Abp.IdentityServer.HttpApi.Client" Version="5.0.0" />
+    <ProjectReference Include="..\..\modules\Volo.LanguageManagement\src\Volo.Abp.LanguageManagement.HttpApi.Client\Volo.Abp.LanguageManagement.HttpApi.Client.csproj" />
+    <PackageReference Include="Volo.Abp.LeptonTheme.Management.HttpApi.Client" Version="5.0.0" />
+    <PackageReference Include="Volo.Abp.TextTemplateManagement.HttpApi.Client" Version="5.0.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="**\*generate-proxy.json" />
+		<Content Remove="**\*generate-proxy.json" />
+	</ItemGroup>
+
+</Project>

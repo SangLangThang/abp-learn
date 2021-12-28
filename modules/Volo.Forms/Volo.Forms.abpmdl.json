@@ -1,0 +1,91 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "Volo.Forms.Domain.Shared": {
+      "path": "src/Volo.Forms.Domain.Shared/Volo.Forms.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "Volo.Forms.Domain": {
+      "path": "src/Volo.Forms.Domain/Volo.Forms.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "Volo.Forms.EntityFrameworkCore": {
+      "path": "src/Volo.Forms.EntityFrameworkCore/Volo.Forms.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "Volo.Forms.MongoDB": {
+      "path": "src/Volo.Forms.MongoDB/Volo.Forms.MongoDB.abppkg.json",
+      "folder": "src"
+    },
+    "Volo.Forms.TestBase": {
+      "path": "test/Volo.Forms.TestBase/Volo.Forms.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "Volo.Forms.EntityFrameworkCore.Tests": {
+      "path": "test/Volo.Forms.EntityFrameworkCore.Tests/Volo.Forms.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Volo.Forms.MongoDB.Tests": {
+      "path": "test/Volo.Forms.MongoDB.Tests/Volo.Forms.MongoDB.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Volo.Forms.Domain.Tests": {
+      "path": "test/Volo.Forms.Domain.Tests/Volo.Forms.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Volo.Forms.Application.Tests": {
+      "path": "test/Volo.Forms.Application.Tests/Volo.Forms.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Volo.Forms.HttpApi.Host": {
+      "path": "host/Volo.Forms.HttpApi.Host/Volo.Forms.HttpApi.Host.abppkg.json",
+      "folder": "host"
+    },
+    "Volo.Forms.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/Volo.Forms.HttpApi.Client.ConsoleTestApp/Volo.Forms.HttpApi.Client.ConsoleTestApp.abppkg.json",
+      "folder": "test"
+    },
+    "Volo.Forms.Web.Host": {
+      "path": "host/Volo.Forms.Web.Host/Volo.Forms.Web.Host.abppkg.json",
+      "folder": "host"
+    },
+    "Volo.Forms.IdentityServer": {
+      "path": "host/Volo.Forms.IdentityServer/Volo.Forms.IdentityServer.abppkg.json",
+      "folder": "host"
+    },
+    "Volo.Forms.Host.Shared": {
+      "path": "host/Volo.Forms.Host.Shared/Volo.Forms.Host.Shared.abppkg.json",
+      "folder": "host"
+    },
+    "Volo.Forms.Web.Unified": {
+      "path": "host/Volo.Forms.Web.Unified/Volo.Forms.Web.Unified.abppkg.json",
+      "folder": "host"
+    },
+    "Volo.Forms.Application.Contracts": {
+      "path": "src/Volo.Forms.Application.Contracts/Volo.Forms.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "Volo.Forms.Application": {
+      "path": "src/Volo.Forms.Application/Volo.Forms.Application.abppkg.json",
+      "folder": "src"
+    },
+    "Volo.Forms.HttpApi.Client": {
+      "path": "src/Volo.Forms.HttpApi.Client/Volo.Forms.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "Volo.Forms.HttpApi": {
+      "path": "src/Volo.Forms.HttpApi/Volo.Forms.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "Volo.Forms.Web": {
+      "path": "src/Volo.Forms.Web/Volo.Forms.Web.abppkg.json",
+      "folder": "src"
+    }
+  }
+}

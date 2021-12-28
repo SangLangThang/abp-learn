@@ -1,0 +1,54 @@
+{
+  "Id": "6569d7f6-b284-44d8-b778-66e7de2cd992",
+  "Name": "Trainer",
+  "OriginalName": "Trainer",
+  "NamePlural": "Trainers",
+  "DatabaseTableName": "Trainers",
+  "Namespace": "Trainers",
+  "BaseClass": "FullAuditedAggregateRoot",
+  "PrimaryKeyType": "Guid",
+  "IsMultiTenant": false,
+  "ShouldCreateUserInterface": true,
+  "ShouldCreateBackend": true,
+  "ShouldAddMigration": true,
+  "ShouldUpdateDatabase": true,
+  "CreateTests": true,
+  "Properties": [
+    {
+      "Id": "42c591ca-9571-4348-8571-38131cabe935",
+      "Name": "Name",
+      "Type": "string",
+      "EnumType": "",
+      "EnumNamespace": "",
+      "EnumAngularImport": "shared/enums",
+      "IsNullable": false,
+      "IsRequired": true,
+      "MinLength": null,
+      "MaxLength": null,
+      "SortOrder": 0,
+      "SortType": 0,
+      "Regex": "",
+      "EmailValidation": false,
+      "EnumValues": null,
+      "IsSelected": true
+    }
+  ],
+  "NavigationProperties": [
+    {
+      "Namespace": "Pokeee.Pokemons",
+      "EntityName": "Pokemon",
+      "EntityNameWithDuplicationNumber": "Pokemon",
+      "EntitySetNameWithDuplicationNumber": "Pokemons",
+      "EntitySetName": "Pokemons",
+      "DtoNamespace": "Pokeee.Pokemons",
+      "DtoEntityName": "PokemonDto",
+      "Type": "Guid",
+      "Name": "PokemonId",
+      "ReferencePropertyName": "Pokemon",
+      "DisplayProperty": "Avatar",
+      "UiPickType": "Dropdown",
+      "IsRequired": true
+    }
+  ],
+  "PhysicalFileName": "Trainer.json"
+}

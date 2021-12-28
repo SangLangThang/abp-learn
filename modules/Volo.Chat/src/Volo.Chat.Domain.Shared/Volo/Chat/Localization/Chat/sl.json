@@ -1,0 +1,33 @@
+{
+  "culture": "sl",
+  "texts": {
+    "Volo.Chat:010001": "Sporočilo ne sme biti prazno!",
+    "Volo.Chat:010002": "Uporabnika sprejemnika ni bilo mogoče najti!",
+    "Volo.Chat:010003": "Drugega uporabnika ni mogoče najti!",
+    "Permission:Chat": "Klepetajte",
+    "Permission:Messaging": "Sporočila",
+    "Feature:ChatGroup": "Klepetajte",
+    "Feature:ChatEnable": "Omogoči klepet",
+    "Feature:ChatEnableDescription": "Omogoči sistem za sporočanje v aplikaciji.",
+    "SearchInContacts": "Išči v Kontaktih ...",
+    "SendOnEnter": "Pošlji ob vstopu",
+    "Send": "Pošlji",
+    "OtherContacts": "DRUGI STIKI",
+    "TypeMessage": "Vnesite sporočilo",
+    "YouHave{0}UnreadMessages": "Imate {0} neprebranih sporočil",
+    "YouHaveAnUnreadMessage": "Imate neprebrano sporočilo",
+    "NewChatMessage": "Novo sporočilo v klepetu",
+    "Jan": "Jan",
+    "Feb": "februarja",
+    "Mar": "mar",
+    "Apr": "apr",
+    "May": "maja",
+    "Jun": "jun",
+    "Jul": "jul",
+    "Aug": "avg",
+    "Sept": "sept",
+    "Oct": "oktober",
+    "Nov": "nov",
+    "Dec": "dec"
+  }
+}

@@ -1,0 +1,28 @@
+@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Pokeee.Localization
+@using Pokeee.Web.Pages.Trainers
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using Pokeee.Trainers;
+@using System.Globalization
+@inject IHtmlLocalizer<PokeeeResource> L
+@model EditModalModel
+@{
+    Layout = null;
+}
+
+<form data-ajaxForm="true" asp-page="/Trainers/EditModal" autocomplete="off" data-cy="form_edit">
+    <abp-modal>
+        <abp-modal-header title="@L["Update"].Value"></abp-modal-header>
+
+        <abp-modal-body>
+            <abp-input asp-for="Id" />
+            
+            <abp-input asp-for="Trainer.Name"/>
+
+                        <abp-select asp-for="Trainer.PokemonId" asp-items="Model.PokemonLookupListRequired" label="@L["Pokemon"].Value"/>
+        </abp-modal-body>
+
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
+</form>

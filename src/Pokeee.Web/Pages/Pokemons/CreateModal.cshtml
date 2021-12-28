@@ -1,0 +1,33 @@
+@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Pokeee.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using Pokeee.Web.Pages.Pokemons
+@using Pokeee.Pokemons;
+@using System.Globalization
+@inject IHtmlLocalizer<PokeeeResource> L
+@model CreateModalModel
+@{
+    Layout = null;
+}
+
+<form data-ajaxForm="true" asp-page="/Pokemons/CreateModal" autocomplete="off">
+    <abp-modal>
+        <abp-modal-header title="@L["NewPokemon"].Value"></abp-modal-header>
+
+        <abp-modal-body>
+            
+            <abp-input asp-for="Pokemon.Avatar"/>
+
+            <abp-input asp-for="Pokemon.Name"/>
+
+            <abp-input asp-for="Pokemon.Slot"/>
+
+            <abp-input asp-for="Pokemon.Type"/>
+
+            
+        </abp-modal-body>
+
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
+</form>

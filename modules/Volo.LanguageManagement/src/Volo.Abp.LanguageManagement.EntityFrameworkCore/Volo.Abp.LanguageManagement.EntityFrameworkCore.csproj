@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="5.0.0" />
+    <ProjectReference Include="..\Volo.Abp.LanguageManagement.Domain\Volo.Abp.LanguageManagement.Domain.csproj" />
+    <PackageReference Include="Volo.Abp.Commercial.Core" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
