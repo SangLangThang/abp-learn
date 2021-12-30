@@ -14,6 +14,7 @@ namespace Pokeee.Web.Pages.Infomation
         public List<SelectListItem> CityList { get; set; }
         [BindProperty]
         public DetailedModel MyDetailedModel { get; set; }
+        public ContactModel MyContactModel { get; set; }
         public void OnGet()
         {
             MyModel = new SampleModel();
@@ -39,6 +40,8 @@ namespace Pokeee.Web.Pages.Infomation
                 Country = "RU",
                 NeighborCountries = new List<string>() { "NY", "LDN" }
             };
+
+            MyContactModel = new ContactModel();
         }
 
         public class SampleModel
@@ -126,6 +129,10 @@ namespace Pokeee.Web.Pages.Infomation
             [SelectItems(nameof(CityList))]
             [Display(Name = "Neighbor Countries")]
             public List<string> NeighborCountries { get; set; }
+        }
+        public class ContactModel
+        {
+            public string Name { get; set; }
         }
         public enum CarType
         {

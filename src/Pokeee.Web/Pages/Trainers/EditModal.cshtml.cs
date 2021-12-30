@@ -36,11 +36,11 @@ namespace Pokeee.Web.Pages.Trainers
             Trainer = ObjectMapper.Map<TrainerDto, TrainerUpdateDto>(trainerWithNavigationPropertiesDto.Trainer);
 
             PokemonLookupListRequired.AddRange((
-                                    await _trainersAppService.GetPokemonLookupAsync(new LookupRequestDto
-                                    {
-                                        MaxResultCount = LimitedResultRequestDto.MaxMaxResultCount
-                                    })).Items.Select(t => new SelectListItem(t.DisplayName, t.Id.ToString())).ToList()
-                        );
+                await _trainersAppService.GetPokemonLookupAsync(new LookupRequestDto
+                {
+                    MaxResultCount = LimitedResultRequestDto.MaxMaxResultCount
+                })).Items.Select(t => new SelectListItem(t.DisplayName, t.Id.ToString())).ToList()
+            );
 
         }
 
